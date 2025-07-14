@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/contacto.css">
+    <link rel="stylesheet" href="/assets/css/tienda.css">
+    <title>Tienda Catra-Tech</title>
+</head>
+<body class="dark">
+    <!-- Botón flotante para cambiar de tema -->
+    <button type="button" class="btn btn-outline-dark modo-toggle" id="cambio-dark" title="Cambiar tema">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffcc00" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+        <path d="M12 5l0 .01" />
+        <path d="M17 7l0 .01" />
+        <path d="M19 12l0 .01" />
+        <path d="M17 17l0 .01" />
+        <path d="M12 19l0 .01" />
+        <path d="M7 17l0 .01" />
+        <path d="M5 12l0 .01" />
+        <path d="M7 7l0 .01" />
+    </svg>
+    </button>
+    
+    <!-- navbar -->
+    <section class="container-fluid p-0">
+        <div class="row m-0">
+            <div class="col-12 fixed-top p-0">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary w-100">
+                <a class="navbar-brand ms-3" href="#">Catra-Tech</a>
+                <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="#ref-bienvenida">Inicio</a>
+                        <a class="nav-link" href="#ref-nosotros">Nosotros</a>
+                        <a class="nav-link" href="#ref-productos">Productos</a>
+                        <a class="nav-link" href="#ref-contacto">Contacto</a>
+                        <a class="nav-link" href="#ubicacion">Ubicación</a>
+                        <a class="nav-link" href="#garantia">Garantía</a>
+                    </div>
+                    <button class="btn btn-outline-dark me-3 position-relative" type="button" id="car-products"
+                        data-bs-toggle="modal" data-bs-target="#car-modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#007aff" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" >
+                        <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l14 1l-1 7h-13" />
+                        </svg>
+                        <span class="badge text-bg-light position-absolute top-0 start-100 translate-middle rounded-pill" id="count-list-product"></span>
+                    </button>
+                </div>
+            </nav>
+            </div>
+        </div>
+    </section>
+
+    <!--Imagen de bienvenida-->
+    <div class="col-12 mt-5" id="ref-bienvenida">
+        <div class="hero-banner position-relative">
+            <img src="/assets/img/fondo.jpg" class="img-fluid w-100" alt="Imagen de producto tecnológico">
+            <div class="hero-text position-absolute top-50 start-50 translate-middle text-center text-white">
+                <h1 class="display-4 fw-bold">En Catra-Tech</h1>
+                <p class="lead fw-bold text-light">Te ofrecemos lo mejor en tecnología para transformar tu futuro.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Sobre nosotros-->
+    <section class="sobre-nosotros py-5" id="ref-nosotros">
+        <div class="container">
+            <div class="row align-items-center g-4">
+            <div class="col-md-6">
+                <div class="sobre-nosotros-cont p-4 text-white">
+                    <h2 class="sobre-nosotros-h">SOBRE NOSOTROS</h2>
+                    <p class="sobre-nosotros-p">Somos una tienda dedicada a brindar soluciones tecnológicas de última generación. Nos comprometemos a encontrar los mejores productos tecnológicos, componentes y servicios para tu formacion profesional.</p>
+                </div>
+                <div class="que-hacemos mt-4">
+                    <h2 class="sobre-nosotros-h">COMPROMISO CON LOS CLIENTES</h2>
+                    <p class="sobre-nosotros-p">Nos comprometemos a brindar la mejor experiencia a nuestros clientes, para transmitir seguridad y confianza con los productos y entregarles la mejor calidad. Cada necesidad de los clientes es una prioridad. Trabajeremos día a día para su satisfacción.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="/assets/img/nosotros.jpg" class="img-fluid rounded shadow animacion-img" alt="Nuestro equipo">
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Productos-->
+    <section class="container-fluid mt-5" id="ref-productos">
+        <h1 class="title-product-dark text-center">
+            PRODUCTOS
+        </h1>
+        <div class="fondo-products row justify-content-center g-4 mt-4">
+            <h1 class="titulo-productos title-product-sec text-center">
+                LAPTOPS
+            </h1>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="/assets/img/productos/laptops/laptop-1.jpg" class="card-img-top img-product" alt="Lenovo Ideapad 3">
+                    <div class="card-body">
+                        <h5 class="card-title text-center title-product">Lenovo Ideapad 3</h5>
+                        <p class="text-descript-dark card-text descrip-product">Una laptop accesible, excelente para el uso diario. Memoria potente para varias tareas.</p>
+                        <p class="price-descript-dark price-product text-center fw-bold mb-3">16995.00</p>
+                        <button class="products-btn-detalles btn w-100 mt-2 text-light fw-bold" style="background-color: #088fb8;" onclick="verDetalles('Lenovo Ideapad 3', '/assets/img/productos/laptops/laptop-1.jpg', 'Procesadores Intel o AMD, pantallas de 14 0 15.6 pulgadas.', 'L. 16,995.00', ['Procesador i3, i5 o i7 de 11va Gen', '8 GB de RAM DDR4, opción para expandir', 'Gráficos integrados Intel Iris Xe Graphics'])" data-bs-toggle="modal" data-bs-target="#detalleProducto">Ver detalles</button>
+                        <button class="products-btn-agregar btn btn-producto fw-bold w-100 mt-2" style="background-color: #fed300;" type="button">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="/assets/img/productos/laptops/laptop-2.jpg" class="card-img-top img-product" alt="HP OmniBook X">
+                    <div class="card-body">
+                        <h5 class="card-title text-center title-product">HP OmniBook X</h5>
+                        <p class="text-descript-dark card-text descrip-product">Rapida y ligera con procesador de alta calidad. Excelente opción para multitareas.</p>
+                        <p class="price-descript-dark price-product text-center fw-bold mb-3">39995.00</p>
+                        <button class="products-btn-detalles btn w-100 mt-2 text-light fw-bold" style="background-color: #088fb8;" onclick="verDetalles('HP OmniBook X', '/assets/img/productos/laptops/laptop-2.jpg', 'Excelente duración de la batería y carga ráapida.', 'L. 39,995.00', ['Windows 11', 'Memoria RAM 32 GB', 'Disco duro 1 TB SSD'])" data-bs-toggle="modal" data-bs-target="#detalleProducto">Ver detalles</button>
+                        <button class="products-btn-agregar btn btn-producto fw-bold w-100 mt-2" style="background-color: #fed300;" type="button">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="/assets/img/productos/laptops/laptop-3.jpg" class="card-img-top img-product" alt="Dell Latitude 5420">
+                    <div class="card-body">
+                        <h5 class="card-title text-center title-product">Dell Latitude 5420</h5>
+                        <p class="text-descript-dark card-text descrip-product">Laptop empresarial, ideal para estudiantes. Combina potencia con durabilidad.</p>
+                        <p class="price-descript-dark price-product text-center fw-bold mb-3">9499.00</p>
+                        <button class="products-btn-detalles btn w-100 mt-2 text-light fw-bold" style="background-color: #088fb8;" onclick="verDetalles('Dell Latitude 5420', '/assets/img/productos/laptops/laptop-3.jpg', 'Rendimiento solido y alta duración de la batería.', 'L. 9,449.00', ['Gráaficos Intel Iris X', 'Procesadores i5/i7 de 11va Gen', 'HDMI 2.0/DisplayPort'])" data-bs-toggle="modal" data-bs-target="#detalleProducto">Ver detalles</button>
+                        <button class="products-btn-agregar btn btn-producto fw-bold w-100 mt-2" style="background-color: #fed300;" type="button">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <h1 class="titulo-productos title-product-sec text-center">
+                CELULARES
+            </h1>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="/assets/img/productos/celulares/producto-1.jpg" class="card-img-top img-product" alt="Samsung Galaxy S25">
+                    <div class="card-body">
+                        <h5 class="card-title text-center title-product">Samsung Galaxy S25</h5>
+                        <p class="text-descript-dark card-text descrip-product">Un movil compacto pero potente. Diseñado con los mejores materiales.</p>
+                        <p class="price-descript-dark price-product text-center fw-bold mb-3">37195.00</p>
+                        <button class="products-btn-detalles btn w-100 mt-2 text-light fw-bold" style="background-color: #088fb8;" onclick="verDetalles('Samsung Galaxy S25', '/assets/img/productos/celulares/producto-1.jpg', 'El dispositivo con mayor desarrollo técnico y procesador de última generación.', 'L. 37,195.00', ['Pantalla 6.9 Dynamic AMOLED 2X', 'Almacenamiento 512 GB', 'Batería 5000 mAh'])" data-bs-toggle="modal" data-bs-target="#detalleProducto">Ver detalles</button>
+                        <button class="products-btn-agregar btn btn-producto fw-bold w-100 mt-2" style="background-color: #fed300;" type="button">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="/assets/img/productos/celulares/producto-2.jpg" class="card-img-top img-product" alt="Iphone 16">
+                    <div class="card-body">
+                        <h5 class="card-title text-center title-product">Iphone 16</h5>
+                        <p class="text-descript-dark card-text descrip-product">Destacado por su potente procesador. Ademas de sus cámaras de alta calidad.</p>
+                        <p class="price-descript-dark price-product text-center fw-bold mb-3">48995.00</p>
+                        <button class="products-btn-detalles btn w-100 mt-2 text-light fw-bold" style="background-color: #088fb8;" onclick="verDetalles('Iphone 16', '/assets/img/productos/celulares/producto-2.jpg', 'Destaca por su calidad de fotografía y video.', 'L. 48,995.00', ['Almacenamiento de 128 GB, 256 GB, 512 GB', 'Pantalla OLED de 6.1 pulgadas', 'GPU de 5 núcleos'])" data-bs-toggle="modal" data-bs-target="#detalleProducto">Ver detalles</button>
+                        <button class="products-btn-agregar btn btn-producto fw-bold w-100 mt-2" style="background-color: #fed300;" type="button">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="/assets/img/productos/celulares/producto-3.jpg" class="card-img-top img-product" alt="Huawei P50 Pro">
+                    <div class="card-body">
+                        <h5 class="card-title text-center title-product">Huawei P50 Pro</h5>
+                        <p class="text-descript-dark card-text descrip-product">Un aliado que ofrece innovación y rendimiento. Destaca su diseño elegante.</p>
+                        <p class="price-descript-dark price-product text-center fw-bold mb-3">31999.00</p>
+                        <button class="products-btn-detalles btn w-100 mt-2 text-light fw-bold" style="background-color: #088fb8;" onclick="verDetalles('Huawei P50 Pro', '/assets/img/productos/celulares/producto-3.jpg', 'Destaca por su calidad y conectividad inalámbrica.', 'L. 31,999.00', ['Almacenamiento de 128 GB, 256 GB, 512 GB', 'RAM 8/12', 'Sonido estereo'])" data-bs-toggle="modal" data-bs-target="#detalleProducto">Ver detalles</button>
+                        <button class="products-btn-agregar btn btn-producto fw-bold w-100 mt-2" style="background-color: #fed300;" type="button">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <h1 class="titulo-productos title-product-sec text-center">
+                IMPRESORAS
+            </h1>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="/assets/img/productos/impresoras/producto-1.jpeg" class="card-img-top img-product" alt="HP Ink Tank 315">
+                    <div class="card-body">
+                        <h5 class="card-title text-center title-product">HP Ink Tank 315</h5>
+                        <p class="text-descript-dark card-text descrip-product">Buena opción debido a su bajo costo x impresión. Lo mejor en calidad-precio.</p>
+                        <p class="price-descript-dark price-product text-center fw-bold mb-3">9995.00</p>
+                        <button class="products-btn-detalles btn w-100 mt-2 text-light fw-bold" style="background-color: #088fb8;" onclick="verDetalles('HP Ink Tank 315', '/assets/img/productos/impresoras/producto-1.jpeg', 'Destacada por su multifuncionalidad y rendimiento.', 'L. 9,995.00', ['Imprimir, copiar y escanear', 'Conectividad USB (No WI-FI/Bluetooth)', 'Resolución 1200x1200 en negro/4800x1200 en color'])" data-bs-toggle="modal" data-bs-target="#detalleProducto">Ver detalles</button>
+                        <button class="products-btn-agregar btn btn-producto fw-bold w-100 mt-2" style="background-color: #fed300;" type="button">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="/assets/img/productos/impresoras/producto-2.jpeg" class="card-img-top img-product" alt="Epson FX-890II">
+                    <div class="card-body">
+                        <h5 class="card-title text-center title-product">Epson FX-890II</h5>
+                        <p class="text-descript-dark card-text descrip-product">Ofrece altas velocidades de impresión. Conocida por su alta durabilidad.</p>
+                        <p class="price-descript-dark price-product text-center fw-bold mb-3">12270.00</p>
+                        <button class="products-btn-detalles btn w-100 mt-2 text-light fw-bold" style="background-color: #088fb8;" onclick="verDetalles('Epson FX-890II', '/assets/img/productos/impresoras/producto-2.jpeg', 'Tecnología avanzada y velocidad de impresión.', 'L. 12,270.00', ['Conectividad USB (Otras vers. incluyen WI-FI)', 'Compatibilidad con Sistemas Windows', 'Soporta multicopias y formularios continuos'])" data-bs-toggle="modal" data-bs-target="#detalleProducto">Ver detalles</button>
+                        <button class="products-btn-agregar btn btn-producto fw-bold w-100 mt-2" style="background-color: #fed300;" type="button">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="/assets/img/productos/impresoras/producto-3.jpeg" class="card-img-top img-product" alt="Canon G3170">
+                    <div class="card-body">
+                        <h5 class="card-title text-center title-product">Canon G3170</h5>
+                        <p class="text-descript-dark card-text descrip-product">Destaca por su calidad y conectividad inalámbrica. Popular en uso doméstico</p>
+                        <p class="price-descript-dark price-product text-center fw-bold mb-3">6720.00</p>
+                        <button class="products-btn-detalles btn w-100 mt-2 text-light fw-bold" style="background-color: #088fb8;" onclick="verDetalles('Canon G3170', '/assets/img/productos/impresoras/producto-3.jpeg', 'Destaca por su calidad y conectividad inalámbrica.', 'L. 6,720.00', ['Inyección de tinta híbrida', 'Capacidad de 100 hojas', 'Resolución de 4800x1200'])" data-bs-toggle="modal" data-bs-target="#detalleProducto">Ver detalles</button>
+                        <button class="products-btn-agregar btn btn-producto fw-bold w-100 mt-2" style="background-color: #fed300;" type="button">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary btn-lg ver-mas mb-3" onclick="event.preventDefault();">Ver más productos</a>
+            </div>
+        </div>
+    </section>
+
+    <!--Modal ver detalles-->
+    <div class="modal fade" id="detalleProducto" tabindex="-1" aria-labelledby="detalleProductoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detalleProductoLabel">Detalles del producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-5 text-center">
+                            <img id="detalle-img" src="" class="img-fluid rounded" alt="Imagen del producto">
+                        </div>
+                        <div class="col-md-7">
+                            <h4 id="detalle-titulo"></h4>
+                            <p id="detalle-descrip"></p>
+                            <ul id="detalle-lista" class="list-group list-group-flush"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span id="detalle-precio" class="me-auto fw-bold"></span>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Modal carrito-->
+        <div class="modal fade" id="car-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Productos</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class='col-12 validate-message' hidden>
+                            <div class="alert alert-info" role="alert">
+                                No hay productos seleccionados...
+                            </div>
+                        </div>
+                        <div class="row validate-car">
+                            <div class="col-12">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Cantidad</th>
+                                            <th>Precio</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="list-products">
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-12 mt-3">
+                            <p class="h3 text-center">Detalle de la Compra</p>
+                                <table class="table table-striped">
+                                    <tbody id="detailProducts">
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal confirmacion-->
+        <div class="modal fade" id="add-product-confirm" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="alert alert-success" role="alert">
+                        Se agrego el producto al carrito
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!--Anuncio-->
+    <section class="container-anuncio mt-3">
+        <div class="row justify-content-center">
+            <div class="col-md-10 text-center">
+            <img src="/assets/img/anuncio/anuncio-1.png" alt="Ofertas con 20% de descuento" class="img-fluid rounded shadow-sm animacion-anuncio">
+            </div>
+        </div>
+    </section>
+
+    <!--Formulario de contacto-->
+    <div class="parallax-contacto">
+        <section class="container-contacto mt-3" id="ref-contacto">
+            <div class="row">
+                <div class="col-12 my-5">
+                    <p class="title-contact-dark h1 text-center">
+                        CONTACTO
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" id="nombre" aria-describedby="name" placeholder="Ingrese su nombre">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <!--editado a type text para ingresar guion ejem. +504 9988-7766-->
+                            <input type="text" class="form-control" id="numTel" placeholder="Ingrese su telefono">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="mensaje" rows="3" placeholder="Escriba un mensaje breve"></textarea>
+                        </div>
+                        <!-- <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="chkInfo">
+                            <label class="form-check-label" for="chkInfo">¿Desea informacion?</label>
+                        </div> -->
+                        <div class="d-grid gap-2" id="btnAnim">
+                        <button type="button" class="btn btn-light" id="btnSubmit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-12 col-md-6 mt-1">
+                    <ul class="list-group" id="list-info">
+                        <!-- <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">A fourth item</li>
+                        <li class="list-group-item">And a fifth one</li> -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!--Ubicacion-->
+    <section id="ubicacion" class="bg-light py-5 mt-5">
+        <div class="container">
+            <h1 class="ubicacion-title text-center mb-4">UBICACION</h1>
+            <p class="ubicacion-p-dark text-center mb-4">El Progreso, Yoro. Horario de  lunes a viernes de 8 a.m. a 4 p.m.<br>
+            Sabados de 8 a.m. a 2 p.m.</p>
+            <div class="text-center">
+                <img src="/assets/img/ubicacion.png" alt="Ubicación de la tienda" class="img-fluid rounded shadow-sm" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+    </section>
+
+    <!--Garantia-->
+    <section id="garantia" class="bg-white py-5">
+        <div class="container">
+            <h2 class="garantia-dark text-center mb-4">GARANTIA</h2>
+            <p class="garantia-dark text-center mb-5" id="garantia-descr">Nuestros productos están respaldados con garantía de un año a partir de la fecha de compra</p>
+            <div class="row g-4 align-items-center">
+            <div class="col-md-6">
+                <img src="/assets/img/garantia.png" alt="Garantía asegurada" class="img-fluid rounded shadow-sm animacion-img">
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled fs-5">
+                <li class="mb-3">
+                    ✅ <strong>Garantía de un año</strong> para todos los productos.
+                </li>
+                <li class="mb-3">
+                    🔧 <strong>Soporte técnico gratuito</strong> durante el período de garantía.
+                </li>
+                <li class="mb-3">
+                    📦 <strong>Cambios y devoluciones</strong> sin complicaciones.
+                </li>
+                <li class="mb-3">
+                    🔒 <strong>Seguridad y calidad</strong> certificadas para cada artículo.
+                </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Banner-->
+    <section class="container_banner">
+        <div class="row">
+            <div class="banner animated tada">
+                <div class=" big-text animated tada">Catra-Tech</div>
+                <div>Los mejores productos tecnológicos</div>
+                <a href="#">Ir a la Tienda</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+	<section id="footer">
+		<div class="container">
+			<div class="row text-center text-xs-center text-sm-left text-md-left">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5 class="a-dark">Enlaces rápidos</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a class="a-dark" href="#ref-inicio"><i class="fa fa-angle-double-right"></i>Inicio</a></li>
+						<li><a class="a-dark" href="#ref-nosotros"><i class="fa fa-angle-double-right"></i>Nosotros</a></li>
+						<li><a class="a-dark" href="#ref-productos"><i class="fa fa-angle-double-right"></i>Tienda</a></li>
+						<li><a class="a-dark" href="#ref-contacto"><i class="fa fa-angle-double-right"></i>Contacto</a></li>
+						<li><a class="a-dark" href="#ubicacion"><i class="fa fa-angle-double-right"></i>Ubicación</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5 class="a-dark">Productos</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a class="a-dark" href="#" onclick="event.preventDefault();"><i class="fa fa-angle-double-right"></i>Laptops</a></li>
+						<li><a class="a-dark" href="#" onclick="event.preventDefault();"><i class="fa fa-angle-double-right"></i>Celulares</a></li>
+						<li><a class="a-dark" href="#" onclick="event.preventDefault();"><i class="fa fa-angle-double-right"></i>Impresoras</a></li>
+						<li><a class="a-dark" href="#" onclick="event.preventDefault();"><i class="fa fa-angle-double-right"></i>Televisores</a></li>
+						<li><a class="a-dark" href="#" onclick="event.preventDefault();"><i class="fa fa-angle-double-right"></i>Gaming</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5 class="a-dark">Servicios</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a class="a-dark" href="#" onclick="event.preventDefault();"><i class="fa fa-angle-double-right"></i>Mantenimiento</a></li>
+						<li><a class="a-dark" href="#" onclick="event.preventDefault();"><i class="fa fa-angle-double-right"></i>Impresiones</a></li>
+						<li><a class="a-dark" href="#" onclick="event.preventDefault();"><i class="fa fa-angle-double-right"></i>Videovigilancia</a></li>
+						<li><a class="a-dark" href="#" onclick="event.preventDefault();"><i class="fa fa-angle-double-right"></i>Alarmas</a></li>
+						<li><a class="a-dark" href="#" onclick="event.preventDefault();"><i class="fa fa-angle-double-right"></i>Otros</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+                <div class="col-12 mt-2 mt-sm-5">
+                    <ul class="list-unstyled list-inline text-center social-icons">
+                    <li class="list-inline-item">
+                        <a href="#" onclick="event.preventDefault();"><img src="/assets/img/iconos/facebook.png" alt="Facebook"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" onclick="event.preventDefault();"><img src="/assets/img/iconos/instagram.png" alt="Instagram"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" onclick="event.preventDefault();"><img src="/assets/img/iconos/youtube.png" alt="YouTube"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" onclick="event.preventDefault();"><img src="/assets/img/iconos/telegram.png" alt="Twitter"></a>
+                    </li>
+                    </ul>
+                </div>
+                <hr>
+            </div>	
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+					<p class="a-dark"><u>Catra-Tech</u> Marca Registrada. [Tecnología con Sello Catracho, JM] - El Progreso, Yoro, Honduras.</p>
+					<p class="a-dark">Jason Madrid © Derechos Reservados.Ceutec</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <script src="/assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/tienda.js"></script>
+    <script src="/assets/js/contacto.js"></script>
+</body>
+</html>

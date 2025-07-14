@@ -1,0 +1,462 @@
+body{
+    background-color: #ffffff !important;
+    overflow-x: hidden;
+}
+
+/*Estilos del navbar*/
+.navbar-brand {
+    color: #142343;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+.navbar-brand:hover {
+    color: #6b8ff4;
+}
+
+.navbar-nav .nav-link {
+    color: #142343;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+    color: #6b8ff4;
+    text-decoration: underline;
+}
+
+/*Formato para vista movil*/
+.navbar-toggler {
+    border-color: #142343;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+/* giro al icono del menu en vista movil */
+.navbar-toggler.rotate {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+/*Borde y efecto flotante*/
+.navbar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Botón flotante */
+.modo-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1050;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+/* En modo oscuro, cambia estilo del botón */
+body.dark .modo-toggle {
+    background-color: #2c2c2c;
+    border-color: #666;
+}
+
+/*Imagen de bienvenida*/
+.hero-banner {
+    position: relative;
+    overflow: hidden;
+    height: 90vh;
+}
+
+.hero-banner img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: brightness(70%);
+}
+
+.hero-text {
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
+
+/*Sobre Nosotros*/
+.sobre-nosotros{
+    background-color: #f9f9f9;
+}
+
+.sobre-nosotros-cont{
+    background-color: #375eab;
+    border-radius: 10px;
+}
+
+.sobre-nosotros-cont h2,
+.sobre-nosotros-cont p {
+    margin-bottom: 1rem;
+}
+
+.que-hacemos h2 {
+    color: #1f1f1f;
+    margin-bottom: 0.5rem;
+}
+
+.que-hacemos p {
+    color: #333;
+}
+
+.animacion-img {
+    transition: transform 0.5s ease;
+}
+
+.animacion-img:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/*Productos*/
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+.titulo-productos{
+    color: #000000;
+}
+
+.card-text{
+    color: black;
+}
+
+.fondo-product{
+    padding: 10px;
+    margin: 10px;
+    padding-bottom: 30px;
+    background-color: #cccccc !important; 
+    border-radius: 10px;
+}
+
+.ver-mas {
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.ver-mas:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/*Anuncios*/
+.container-anuncio{
+    background-color: #f9f9f9;
+}
+
+.animacion-anuncio {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animacion-anuncio.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*Ubicacion*/
+#ubicacion h1 {
+    font-weight: bold;
+    color: #333;
+}
+
+#ubicacion p {
+    font-weight: 60px;
+    color: #666;
+}
+
+/*Contacto parallax*/
+.parallax-contacto {
+    background-image: url('/assets/img/parallax1.jpg'); /* Cambia esta ruta */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+    color: #fff;
+}
+
+/*Garantia*/
+#garantia h2 {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#garantia-descr{
+    font-size: 20px;
+}
+
+/*Banner*/
+.container_banner{
+    width: 100%;
+    background:url(/assets/img/anuncio/anuncio-2.gif);
+    background-size: cover;
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    padding: 40px 15px;
+}
+
+.big-text {
+    font-size: 90px;
+    font-weight:800;
+    animation-delay: 1s;
+}
+.container_banner a {
+    display: inline-block;
+    background: #fff;
+    color: #36465d;
+    text-transform: uppercase;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 30px;
+    transition: .3s;
+}
+.container_banner a:hover {
+    background: #6da0fd;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+/* Footer */
+@import url('#');
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    background: #f9f9f9 !important;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+
+.a-dark{
+    color: rgb(0, 0, 0) !important;
+}
+
+.dark .a-dark{
+    color: rgb(255, 255, 255) !important;
+}
+
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+	margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+    opacity: 0.85;
+}
+
+/*Modo oscuro*/
+.dark{
+    background-color: black !important;
+}
+
+.dark .container-fluid nav{
+    background-color: #00182e !important;
+}
+
+.dark .navbar-brand{
+    color: white !important;
+}
+
+.dark .nav-link{
+    color: white !important;
+}
+
+.dark .sobre-nosotros{
+    background-color: #00182e !important;
+}
+
+.dark .sobre-nosotros-cont {
+    background-color: #003058 !important;
+}
+
+.dark .container-fluid{
+    background-color: #00182e !important;
+}
+
+.dark .title-product-dark{
+    color: white !important;
+}
+
+.dark .fondo-products{
+    padding: 5px;
+    margin: 5px;
+    padding-bottom: 30px;
+    background-color: #142343 !important;
+    border-radius: 10px;
+}
+
+.dark .card {
+    background-color: #00182e !important;
+}
+
+.dark .card-title{
+    color: white !important;
+}
+
+.dark .container-anuncio{
+    background-color: black !important;
+}
+
+.dark #ubicacion{
+    background-color: #030718 !important;
+}
+
+.dark .ubicacion-title{
+    color: white !important;
+}
+
+.dark #garantia{
+    background-color: #0c1936 !important;
+}
+
+.dark .list-unstyled{
+    color: rgb(255, 255, 255) !important;
+}
+
+.dark .garantia-dark{
+    color: rgb(255, 255, 255) !important;
+}
+
+.dark #footer{
+    background-color: #00182e !important;
+}
+
+.dark .que-hacemos,h2, p{
+    color: rgb(0, 0, 0) !important;
+}
+
+.dark .sobre-nosotros-p{
+    color: rgb(255, 255, 255) !important;
+}
+
+.dark .sobre-nosotros-h{
+    color: rgb(255, 255, 255) !important;
+}
+
+.dark .title-product-sec{
+    color: rgb(255, 255, 255) !important;
+}
+
+.dark .text-descript-dark{
+    color: rgb(255, 255, 255) !important;
+}
+
+.dark .price-descript-dark{
+    color: rgb(255, 255, 255) !important;
+}
+
+.dark .title-contact-dark{
+    color: rgb(255, 255, 255) !important;
+}
+
+.dark .ubicacion-p-dark{
+    color: rgb(255, 255, 255) !important;
+}
+
+.dark .products-btn-agregar{
+    background-color: #9bc8fb !important;
+}
+
+.dark .products-btn-detalles{
+    background-color: #473b62 !important;
+}

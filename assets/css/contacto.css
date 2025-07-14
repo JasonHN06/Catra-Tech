@@ -1,0 +1,21 @@
+.h1{
+    color: white;
+}
+
+.container-contacto{
+    background-color: #ecebeb;
+    border-radius: 5px;
+    margin: 50px;
+    padding: 0px 50px 50px 50px;
+}
+
+#list-info{
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.dark .container-contacto{
+    background-color: #00182e !important;
+}
