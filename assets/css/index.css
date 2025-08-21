@@ -196,7 +196,7 @@ body.dark .modo-toggle {
 
 /*Contacto parallax*/
 .parallax-contacto {
-    background-image: url('/assets/img/parallax1.jpg'); /* Cambia esta ruta */
+    background-image: url('../../assets/img/parallax1.jpg'); /* Cambia esta ruta */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -218,7 +218,7 @@ body.dark .modo-toggle {
 /*Banner*/
 .container_banner{
     width: 100%;
-    background:url(/assets/img/anuncio/anuncio-2.gif);
+    background:url(../../assets/img/anuncio/anuncio-2.gif);
     background-size: cover;
     font-size: 80px;
     color: #fff;
