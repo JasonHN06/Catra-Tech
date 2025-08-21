@@ -196,7 +196,7 @@ body.dark .modo-toggle {
 
 /*Contacto parallax*/
 .parallax-contacto {
-    background-image: url('../../assets/img/parallax1.jpg'); /* Cambia esta ruta */
+    background-image: url('../../assets/img/parallax1.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
