@@ -235,9 +235,13 @@ body.dark .modo-toggle {
 }
 
 .big-text {
-    font-size: 90px;
-    font-weight:800;
+    font-size: 70px;
+    font-weight:500;
     animation-delay: 1s;
+}
+.banner__text-small {
+    font-size: 40px;
+    font-weight: 400;
 }
 .container_banner a {
     display: inline-block;
